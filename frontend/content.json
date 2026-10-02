@@ -1,0 +1,111 @@
+{
+  "theme": "dark-premium",
+  "name": "Marisol",
+  "project": "BOSCO Departamentos",
+  "hero": {
+    "title": "Te enseño a pasar de 0 a <em>$800K MXN</em> en bienes raíces, sin negocio, sin experiencia, con un método ya probado",
+    "subtitle": "El mismo método con el que mis clientes y yo estamos generando plusvalía del 15% anual en la ciudad de mayor crecimiento de México — explicado paso a paso para que puedas invertir desde donde estás."
+  },
+  "cta": "QUIERO MÁS INFORMACIÓN",
+  "cases": [
+    {
+      "name": "Franciela",
+      "quote": "Mi miedo era perder mi dinero en un fraude. Marisol me mostró el contrato, me explicó todo, y entendí que estaba protegida. Entré con $197,500 — hoy llevo $385,000 de ganancia en menos de un año.",
+      "metric": "$385,000 MXN de plusvalía",
+      "video": "/assets/videos/franciela.mp4",
+      "poster": "/assets/imagenes/franciela-video.webp"
+    },
+    {
+      "name": "Paul",
+      "quote": "No sabía nada de bienes raíces. Marisol me explicó todo con tanta claridad que firmé con confianza. Entré con $204,000 — y antes de que me entreguen el departamento ya llevo $400,000 de plusvalía.",
+      "metric": "$400,000 MXN de plusvalía",
+      "video": "/assets/videos/paul.mp4",
+      "poster": "/assets/imagenes/paul-video.webp"
+    }
+  ],
+  "trust": [
+    [
+      "Contrato de compraventa ante notario",
+      "El desarrollador se compromete legalmente a entregarte tu propiedad. Tú te comprometes a cumplir con tu inversión. Todo por escrito."
+    ],
+    [
+      "Registrado en PROFECO",
+      "La Procuraduría Federal del Consumidor avala este proyecto. PROFECO exige historial, requisitos y permisos antes de registrar cualquier desarrollo. Si ellos lo aprueban, es porque pasó todos sus filtros."
+    ],
+    [
+      "Desarrollador CONSUR — más de 100 años en Yucatán",
+      "No es alguien que apareció ayer. CONSUR es uno de los desarrolladores más importantes del estado, con décadas de proyectos entregados con la más alta calidad."
+    ],
+    [
+      "Todos los permisos vigentes",
+      "Permiso de construcción, de venta y de comercialización. La obra no se va a parar."
+    ],
+    [
+      "Marisol tiene su dinero invertido aquí",
+      "No recomiendo nada donde yo no ponga el mío primero. Si pierdes, yo pierdo."
+    ]
+  ],
+  "offer": [
+    [
+      "Tu departamento en preventa al precio más bajo",
+      "Entras hoy a $2,500,000 MXN con solo $250,000 de enganche. El precio sube conforme avanza la obra — los que entran primero ganan más."
+    ],
+    [
+      "Plusvalía garantizada del 15% anual",
+      "Año 1: $2,800,000. Año 2: $3,050,000. Año 3 (entrega): $3,300,000. Ganancia de $800,000 solo por esperar."
+    ],
+    [
+      "Departamento amueblado y equipado listo para rentar",
+      "Se entrega 100% listo para publicarlo en Airbnb o rentarlo. Ingreso estimado: $15,000 pesos al mes desde el primer día."
+    ],
+    [
+      "Acompañamiento personal de Marisol",
+      "Te guía desde la firma del contrato hasta la entrega. Cualquier duda, cualquier trámite, cualquier pregunta — disponible por WhatsApp."
+    ],
+    [
+      "Acceso a recorrido en obra",
+      "Puedes visitar el terreno y ver los avances de construcción en persona. Nada da más seguridad que verlo con tus propios ojos."
+    ],
+    [
+      "Comunidad de inversionistas",
+      "Entras a un grupo privado con otras personas que también invirtieron. Red de contactos, información y respaldo."
+    ]
+  ],
+  "location": {
+    "title": "Mérida, Yucatán — la ciudad más segura, con mejor calidad de vida y mayor crecimiento de México",
+    "description": "A 20 minutos del mar y 20 minutos del centro histórico. La ciudad mejor calificada en México para vivir, reconocida por su gastronomía, seguridad y calidad de vida. Y también la ciudad donde más están invirtiendo las empresas más grandes del mundo.",
+    "delivery": "Entrega: Diciembre 2028",
+    "developer": "Desarrollador: CONSUR — más de 100 años en Yucatán."
+  },
+  "news": [
+    {
+      "source": "IMER Noticias",
+      "title": "Heineken invertirá 2,750 millones de dólares en México — nueva planta cervecera en Yucatán, municipio de Kanasín. Más de 3,000 empleos directos e indirectos.",
+      "sourceUrl": "https://noticias.imer.mx/blog/heineken-invertira-2-mil-750-mdd-en-mexico-habra-nueva-planta-cervecera-en-yucatan/"
+    },
+    {
+      "source": "Forbes México",
+      "title": "Walmart abre su primer centro de distribución omnicanal en Yucatán.",
+      "sourceUrl": "https://forbes.com.mx/negocios-walmart-yucatan-primer-centro-distribucion-omnicanal/"
+    },
+    {
+      "source": "El Economista",
+      "title": "Yucatán se ha convertido en un estado ideal para invertir — Gobernador Mauricio Vila.",
+      "sourceUrl": "https://www.eleconomista.com.mx/estados/Yucatan-se-ha-convertido-en-un-estado-ideal-para-invertir-Mauricio-Vila-20231124-0008.html"
+    }
+  ],
+  "assets": {
+    "vsl": "/assets/videos/vsl.mp4",
+    "project": "/assets/imagenes/construccion.webp",
+    "investors": [
+      "/assets/imagenes/inversionistas-1.webp",
+      "/assets/imagenes/inversionistas-2.webp",
+      "/assets/imagenes/inversionistas-3.webp"
+    ]
+  },
+  "pendingCase": {
+    "name": "Daniel",
+    "image": "/assets/imagenes/daniel.jpg",
+    "enabled": false
+  }
+}
