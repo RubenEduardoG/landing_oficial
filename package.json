@@ -5,12 +5,13 @@
   "type": "module",
   "description": "BOSCO Departamentos: frontend y backend Node, medios locales y agenda",
   "engines": {
-    "node": ">=22.9.0"
+    "node": "24.x"
   },
   "scripts": {
+    "build": "npm run check",
     "dev": "node --watch --env-file-if-exists=.env backend/server.mjs",
     "start": "node --env-file-if-exists=.env backend/server.mjs",
     "test": "node --test backend/tests/*.test.mjs",
-    "check": "node --check backend/server.mjs && node --check frontend/app.js && node scripts/check-assets.mjs"
+    "check": "node --check backend/server.mjs && node --check backend/storage.mjs && node --check api/[...path].mjs && node --check frontend/app.js && node scripts/check-assets.mjs"
   }
 }

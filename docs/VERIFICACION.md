@@ -1,30 +1,22 @@
-# Verificación de entrega
+# Verificación de despliegue
 
-Ejecutado con Node v24.19.0.
+Validado en local con Node 24.x:
 
-- `npm run check`: sintaxis de frontend/backend y rutas de archivos activos correctas.
-- `npm test`: 13 pruebas aprobadas.
-- Videos inspeccionados con ffprobe: los cuatro MP4 entregados tienen video H.264 y audio AAC; en la entrega liviana se recodificaron a H.264 CRF 26, límite de bitrate 650 kbps y AAC con faststart.
-- Copias WebP generadas desde las fotos reales; portadas desde los MP4 reales.
-- ZIP extraído en una carpeta nueva: `npm run dev` inició correctamente sin instalación ni .env. Health, landing, configuración e imagen respondieron 200; MP4 parcial respondió 206 con 100 bytes.
+- `npm run check` y `npm run build`.
+- `npm test`: 15 pruebas backend.
+- Todas las rutas públicas y páginas directas (`/`, `/registro`, `/gracias`, `/no-apto`, `/privacidad`, `/terminos`), seguridad de archivos y streaming de video por HEAD/rangos.
+- Flujo agenda → preguntas, validaciones, filtros de calificación, cookie de sesión, Calendly verificado y modo embed no verificado.
+- Persistencia local JSONL en desarrollo; persistencia de reservas, respuestas y sesión por Supabase simulada en producción; caso sin variables Supabase informa error y no escribe archivos.
+- La configuración del frontend incluye `/api/config`, `/api/session`, `/api/bookings`, `/api/qualification` y `/api/slots` para demo local.
+- `vercel.json` usa `frontend` como Output Directory y las rutas de página se reescriben a `index.html`.
 
-Las pruebas cubren acceso público, protección de archivos privados, streaming parcial/HEAD, rangos inválidos, reserva dentro de 48 horas, exclusión de dobles reservas demo concurrentes, agenda antes de preguntas, persistencia de lead, consentimiento, opciones válidas, tres filtros negativos, condicional de acompañante, límite de envíos y demo deshabilitada en producción. Se agregó una prueba del enlace por defecto sin token ni .env, y del modo de referencia de widget sin fechas inventadas. La integración Calendly por API se probó con respuestas API simuladas, incluyendo rechazo de evento distinto, duración incorrecta y reserva tardía.
+Los tests de Supabase usan una respuesta HTTP simulada: no se conectó a un proyecto real ni se ejecutó el esquema contra una base remota. No se publicó un despliegue real en Vercel, no se hizo una reserva real de Calendly y no se probaron credenciales, entrega de correo o WhatsApp. La reproducción y los rangos se comprobaron con el servidor local; no se hizo una prueba real de navegador/iPhone en Vercel.
 
-Se integró el enlace público de Calendly enviado por el usuario; no se inició sesión en la cuenta, no se hizo una reserva real ni se conectó GHL, no se enviaron correos ni WhatsApp. No se completó una revisión visual en un navegador real en este entorno; la distribución responsive debe revisarse en escritorio y móvil al abrir el proyecto. No se afirma una prueba real de reproducción en iPhone.
+El VSL principal (`/assets/videos/vsl.mp4`) y la fuente Inter (`/assets/fuentes/inter-var.woff2`) siguen pendientes de entrega. Los MP4 activos, sus posters y las imágenes verificadas conservan rutas relativas desde el directorio estático.
 
-## Revisión manual al abrir
+## Revisión tras configurar
 
-1. Ver landing sin gate; revisar colores, títulos, secciones, noticias, fotos y footer.
-2. Reproducir Franciela y Paul con audio; revisar orientación y fullscreen.
-3. Añadir vsl.mp4 y revisar controles sin duración, sin autoplay ni poster.
-4. Entrar a /registro y comprobar el Calendly integrado. Para pruebas sin reservar externamente, configurar CALENDLY_URL vacío en .env, elegir horario demo y enviar nueve respuestas y consentimiento.
-5. Confirmar /gracias demo y bloque condicional según pregunta 9.
-6. En otra ventana privada, enviar uno de los tres filtros negativos y confirmar /no-apto.
-7. Revisar que los archivos JSONL aparezcan únicamente en backend/data.
-8. Repetir con Calendly configurado antes de publicar; revisar confirmación, Meet y Google Calendar.
-
-## Verificación visual 5.2
-
-`npm run check` y las 13 pruebas vuelven a pasar. La plantilla de landing se ejecutó en un entorno DOM simulado para comprobar que conserva un header, un main, un footer, un H1, cuatro secciones principales, dos testimonios, once elementos de confianza/oferta y un único enlace a registro. Se compararon los bytes del contenido y backend con 5.1: sin cambios. Esta comprobación estructural no sustituye la revisión visual en navegador, que permanece pendiente en escritorio y móvil.
-
-La entrega liviana se creó nuevamente después de detectar que el ZIP descargado estaba truncado. Se comprueba CRC y extracción completa antes de entregar.
+1. En Supabase, ejecutar `supabase/schema.sql` y configurar en Vercel `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` y `PUBLIC_ORIGIN`.
+2. Revisar en `/api/config` que `storageReady` sea `true`; probar acceso a las páginas directas.
+3. Completar el recorrido con Calendly y comprobar el registro en Supabase. Para verificar la cita desde servidor, habilitar token API y URI del tipo de evento.
+4. Probar los MP4, la barra de avance del VSL y los poster/imágenes bajo el dominio desplegado.
