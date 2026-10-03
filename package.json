@@ -1,6 +1,6 @@
 {
   "name": "bosco-marisol-completo",
-  "version": "5.2.0",
+  "version": "6.1.0",
   "private": true,
   "type": "module",
   "description": "BOSCO Departamentos: frontend y backend Node, medios locales y agenda",
