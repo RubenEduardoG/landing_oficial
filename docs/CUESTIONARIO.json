@@ -1,0 +1,140 @@
+{
+  "personales": [
+    {
+      "name": "name",
+      "label": "Nombre completo",
+      "required": true
+    },
+    {
+      "name": "whatsapp",
+      "label": "WhatsApp",
+      "required": true
+    },
+    {
+      "name": "email",
+      "label": "Correo electrónico",
+      "required": true
+    }
+  ],
+  "preguntas": [
+    {
+      "name": "experience",
+      "label": "¿Ya has invertido en bienes raíces antes?",
+      "required": true,
+      "options": [
+        {
+          "value": "experienced",
+          "label": "Sí, ya tengo experiencia"
+        },
+        {
+          "value": "first-time",
+          "label": "No, es mi primera vez"
+        }
+      ]
+    },
+    {
+      "name": "goal",
+      "label": "¿Qué quieres lograr con esta inversión?",
+      "required": true,
+      "options": [
+        {
+          "value": "income",
+          "label": "Generar ingresos pasivos sin depender de mi trabajo"
+        },
+        {
+          "value": "family",
+          "label": "Construir patrimonio para mi familia"
+        },
+        {
+          "value": "diversify",
+          "label": "Diversificar lo que ya tengo invertido"
+        },
+        {
+          "value": "bank",
+          "label": "Hacer crecer mi dinero que está parado en el banco"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "label": "¿En cuánto tiempo quieres invertir?",
+      "required": true,
+      "options": [
+        {
+          "value": "30days",
+          "label": "En los próximos 30 días"
+        },
+        {
+          "value": "2-3months",
+          "label": "En 2 o 3 meses"
+        },
+        {
+          "value": "evaluating",
+          "label": "Todavía lo estoy evaluando"
+        }
+      ]
+    },
+    {
+      "name": "capital",
+      "label": "¿Con cuánto capital cuentas hoy para invertir?",
+      "required": true,
+      "options": [
+        {
+          "value": "under-250k",
+          "label": "Menos de $250,000 MXN"
+        },
+        {
+          "value": "250-500k",
+          "label": "$250,000 – $500,000 MXN"
+        },
+        {
+          "value": "over-500k",
+          "label": "Más de $500,000 MXN"
+        }
+      ]
+    },
+    {
+      "name": "monthly",
+      "label": "¿Cuánto puedes destinar mensualmente?",
+      "required": true,
+      "options": [
+        {
+          "value": "under-5k",
+          "label": "Menos de $5,000"
+        },
+        {
+          "value": "5-10k",
+          "label": "$5,000 – $10,000"
+        },
+        {
+          "value": "over-10k",
+          "label": "Más de $10,000"
+        }
+      ]
+    },
+    {
+      "name": "decision",
+      "label": "¿La decisión de invertir depende únicamente de ti?",
+      "required": true,
+      "options": [
+        {
+          "value": "solo",
+          "label": "Sí, decido yo solo"
+        },
+        {
+          "value": "partner",
+          "label": "No, lo decido con mi pareja o esposo(a)"
+        },
+        {
+          "value": "family",
+          "label": "No, lo decido con un socio o familiar"
+        }
+      ]
+    }
+  ],
+  "filtrosNegativos": {
+    "timeline": "evaluating",
+    "capital": "under-250k",
+    "monthly": "under-5k"
+  }
+}

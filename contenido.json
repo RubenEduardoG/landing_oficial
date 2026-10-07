@@ -1,0 +1,148 @@
+{
+  "theme": "dark-premium",
+  "name": "Marisol",
+  "project": "BOSCO Departamentos",
+  "hero": {
+    "title": "Te enseño a pasar de 0 a <em>$800K MXN</em> en bienes raíces, sin negocio, sin experiencia, con un método ya probado",
+    "subtitle": "El mismo método con el que mis clientes y yo hemos visto una plusvalía sostenida del 15% en los últimos 4 años en la ciudad de mayor crecimiento de México — explicado paso a paso para que puedas invertir desde donde estás."
+  },
+  "cases": [
+    {
+      "name": "Francelia",
+      "quote": "Mi miedo era perder mi dinero en un fraude. Marisol me mostró el contrato, me explicó todo, y entendí que estaba protegida. Entré con $197,500 — hoy llevo $385,000 de ganancia en menos de un año.",
+      "metric": "$385,000 MXN de plusvalía",
+      "video": "/assets/videos/francelia.mp4",
+      "poster": "/assets/imagenes/francelia-video.webp"
+    },
+    {
+      "name": "Paul",
+      "quote": "No sabía nada de bienes raíces. Marisol me explicó todo con tanta claridad que firmé con confianza. Entré con $204,000 — y antes de que me entreguen el departamento ya llevo $400,000 de plusvalía.",
+      "metric": "$400,000 MXN de plusvalía",
+      "video": "/assets/videos/paul.mp4",
+      "poster": "/assets/imagenes/paul-video.webp"
+    },
+    {
+      "name": "Rogel",
+      "quote": "",
+      "metric": "",
+      "video": "/assets/videos/rogel.mp4",
+      "poster": "/assets/imagenes/rogel.webp"
+    },
+    {
+      "name": "Ana Karen",
+      "quote": "",
+      "metric": "",
+      "video": "/assets/videos/ana-karen.mp4",
+      "poster": "/assets/imagenes/ana-karen-video.webp"
+    },
+    {
+      "name": "Daniela",
+      "summary": "Daniela compró en diciembre de 2025 a un precio de $2,000,000 MXN, con $200,000 MXN de enganche. Según la información proporcionada por el cliente, su departamento alcanzó un valor de $2,400,000 MXN.",
+      "metric": "$400,000 MXN de plusvalía",
+      "image": "/assets/imagenes/daniela.webp"
+    }
+  ],
+  "trust": [
+    [
+      "Contrato adherido a PROFECO",
+      "El contrato está adherido a la PROFECO (Procuraduría Federal del Consumidor). PROFECO registra y protege al inversionista, exigiendo al desarrollador cumplir con todos los requisitos legales antes de poder vender."
+    ],
+    [
+      "Desarrollador CONSUR — 15 años de experiencia",
+      "CONSUR cuenta con 15 años de experiencia en desarrollo inmobiliario."
+    ],
+    [
+      "Todos los permisos vigentes",
+      "Una de las señales más claras de que un proyecto es serio es que tiene todo en orden. Bosco cuenta con todas las licencias de construcción, factibilidades y permisos municipales vigentes. La obra no se detiene, tu inversión está protegida."
+    ],
+    [
+      "Marisol tiene su dinero invertido aquí",
+      "Yo no solo te recomiendo este proyecto — invertí en él. Cualquier asesor puede decirte que es una buena oportunidad. Que decida poner su propio dinero ahí contigo es otra cosa. Eso es lo que hace la diferencia."
+    ]
+  ],
+  "offer": [
+    [
+      "Tu departamento en preventa al precio más bajo",
+      "Entras hoy a $2,500,000 MXN con solo $250,000 de enganche. El precio sube conforme avanza la obra — los que entran primero ganan más."
+    ],
+    [
+      "Plusvalía sostenida del 15% en los últimos 4 años",
+      "El proyecto ha mantenido una plusvalía del 15% en los últimos 4 años."
+    ],
+    [
+      "Departamento amueblado y equipado listo para rentar",
+      "Se entrega 100% listo para publicarlo en Airbnb o rentarlo. Ingreso estimado: $15,000 pesos al mes desde el primer día."
+    ],
+    [
+      "Acompañamiento personal de Marisol",
+      "Te guía desde la firma del contrato hasta la entrega. Cualquier duda, cualquier trámite, cualquier pregunta — disponible por WhatsApp."
+    ],
+    [
+      "Acceso a recorrido en obra",
+      "Puedes visitar el terreno y ver los avances de construcción en persona. Nada da más seguridad que verlo con tus propios ojos."
+    ]
+  ],
+  "location": {
+    "title": "Mérida, Yucatán — la ciudad más segura, con mejor calidad de vida y mayor crecimiento de México",
+    "description": "A 20 minutos del mar y 20 minutos del centro histórico. La ciudad mejor calificada en México para vivir, reconocida por su gastronomía, seguridad y calidad de vida. Y también la ciudad donde más están invirtiendo las empresas más grandes del mundo.",
+    "delivery": "Entrega: Diciembre 2028",
+    "developer": "Desarrollador: CONSUR — 15 años de experiencia."
+  },
+  "news": [
+    {
+      "source": "IMER Noticias",
+      "title": "Heineken invertirá 2,750 millones de dólares en México — nueva planta cervecera en Yucatán, municipio de Kanasín. Más de 3,000 empleos directos e indirectos.",
+      "image": "/assets/imagenes/noticias/heinekenmerida.png",
+      "imageAlt": "Nota de IMER Noticias: Heineken invertirá 2 mil 750 mdd en México y habrá una nueva planta en Yucatán.",
+      "sourceUrl": "https://noticias.imer.mx/blog/heineken-invertira-2-mil-750-mdd-en-mexico-habra-nueva-planta-cervecera-en-yucatan/"
+    },
+    {
+      "source": "Forbes México",
+      "title": "Walmart abre su primer centro de distribución omnicanal en Yucatán.",
+      "image": "/assets/imagenes/noticias/walmartmerida.png",
+      "imageAlt": "Nota de Forbes México sobre la apertura del primer centro de distribución omnicanal de Walmart en Yucatán.",
+      "sourceUrl": "https://forbes.com.mx/negocios-walmart-yucatan-primer-centro-distribucion-omnicanal/"
+    },
+    {
+      "source": "El Economista",
+      "title": "Yucatán se ha convertido en un estado ideal para invertir — Gobernador Mauricio Vila.",
+      "image": "/assets/imagenes/noticias/merida.png",
+      "imageAlt": "Nota de El Economista sobre Yucatán como estado ideal para invertir.",
+      "sourceUrl": "https://www.eleconomista.com.mx/estados/Yucatan-se-ha-convertido-en-un-estado-ideal-para-invertir-Mauricio-Vila-20231124-0008.html"
+    }
+  ],
+  "assets": {
+    "vsl": "/assets/videos/vsl.mp4",
+    "project": "/assets/imagenes/construccion.webp",
+    "investors": [
+      "/assets/imagenes/inversionistas-1.webp",
+      "/assets/imagenes/inversionistas-2.webp",
+      "/assets/imagenes/inversionistas-3.webp"
+    ],
+    "marisol": "/assets/imagenes/marisol.webp"
+  },
+  "investorsTitle": "Más de 50 familias invirtiendo y viendo resultados",
+  "trustMedia": [
+    {
+      "kind": "documents",
+      "label": "Ilustración de contrato · contenido difuminado"
+    },
+    {
+      "kind": "projects",
+      "images": [
+        "/assets/imagenes/consur-temozon.jpg",
+        "/assets/imagenes/consur-mio.jpg"
+      ],
+      "label": "Proyectos de CONSUR"
+    },
+    {
+      "kind": "permits",
+      "label": "Ilustración de permisos · contenido difuminado"
+    },
+    {
+      "kind": "photo",
+      "image": "/assets/imagenes/construccion.webp",
+      "label": "Marisol en el proyecto"
+    }
+  ]
+}

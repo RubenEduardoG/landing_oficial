@@ -1,0 +1,19 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import path from 'node:path';
+import {qualifies} from './calificacion.mjs';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const production=process.argv.includes('--produccion');
+const settings=JSON.parse(await readFile(path.join(root,'config-ghl.json'),'utf8'));
+if(production){settings.preview=false;const missing=Object.entries(settings.assets).filter(([,v])=>!/^https:\/\//.test(v));if(missing.length)throw new Error(`Faltan ${missing.length} URLs HTTPS de medios en config-ghl.json. No se generó código de producción.`);if(!/^https:\/\//.test(settings.qualificationEmbedUrl)||!/^https:\/\//.test(settings.calendarEmbedUrl))throw new Error('Faltan URLs HTTPS reales del formulario/recorrido y calendario GHL.');if(!settings.privacyApproved)throw new Error('Revisar y aprobar el borrador del aviso: privacyApproved debe ser true.');if(!settings.nativeFlowVerified)throw new Error('Primero probar el formulario nativo, filtros, agenda y redirecciones: nativeFlowVerified debe ser true.');}
+const replaceAssets=text=>text.replace(/\/assets\/[A-Za-z0-9_./-]+/g,key=>settings.assets[key]||key);
+const content=JSON.parse(replaceAssets(await readFile(path.join(root,'contenido.json'),'utf8')));
+const css=replaceAssets(await readFile(path.join(root,'codigo/estilos.css'),'utf8'));
+const base=await readFile(path.join(root,'codigo/base.js'),'utf8');const runtime=await readFile(path.join(root,'codigo/runtime.js'),'utf8');
+const safeJson=value=>JSON.stringify(value).replace(/</g,'\\u003c');
+function code(page){const s={...settings,assets:undefined};if(page==='gracias-acompanado')s.showDecisionCompanion=true;const renderPage=page==='gracias-acompanado'?'gracias':page;
+const html=`<style>${css}</style><div class="bosco-shell">${settings.preview?'<div class="preview-banner">VISTA PREVIA · Contactos, reservas y mensajes aún no conectados a GHL.</div>':''}<div class="site-background" aria-hidden="true"></div><a class="skip" href="#main">Ir al contenido</a><header class="top"><div class="header-inner"><a class="brand" href="${s.homeUrl}"><span class="brand-name">Marisol Caro</span><span class="brand-project">BOSCO DEPARTAMENTOS</span></a><span class="header-rule" aria-hidden="true"></span></div></header><main id="main" tabindex="-1"><p role="status">Cargando…</p></main><footer><div class="footer-inner"><p>© 2026 Marisol Caro de la Fuente · RFC: CAFM840912HI5 · San Pedro Garza García, N.L. · <a href="${s.privacyUrl}">Aviso de Privacidad</a> · marisolcaro.com</p></div></footer></div>`;
+return `<div class="bosco-ghl-host"></div>\n<script>\n(()=>{const host=window.document.currentScript.previousElementSibling;const shadow=host.attachShadow({mode:'open'});shadow.innerHTML=${safeJson(html)};const document={querySelector:shadow.querySelector.bind(shadow),querySelectorAll:shadow.querySelectorAll.bind(shadow),createElement:window.document.createElement.bind(window.document),get activeElement(){return shadow.activeElement;}};const content=${safeJson(content)},settings=${safeJson(s)},page=${safeJson(renderPage)};\n${qualifies.toString()}\n${base}\n${runtime}\n})();\n</script>`;}
+const target=path.join(root,production?'PARA_PEGAR_GHL':'vista-previa');await mkdir(target,{recursive:true});
+for(const p of ['landing','agenda','gracias','gracias-acompanado','no-apto','privacidad']){const snippet=code(p);await writeFile(path.join(target,`${p}.html`),snippet);if(!production)await writeFile(path.join(target,`${p}-preview.html`),`<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOSCO · ${p}</title><style>body{margin:0;background:#000017}</style></head><body>${snippet}</body></html>`);}
+console.log(production?'Código final generado en PARA_PEGAR_GHL.':'Vista previa generada. No conecta contactos ni reservas.');

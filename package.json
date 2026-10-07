@@ -1,17 +1,16 @@
 {
-  "name": "bosco-marisol-completo",
-  "version": "6.1.0",
+  "name": "bosco-ghl-final",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "BOSCO Departamentos: frontend y backend Node, medios locales y agenda",
   "engines": {
-    "node": "24.x"
+    "node": ">=20"
   },
   "scripts": {
-    "build": "npm run check",
-    "dev": "node --watch --env-file-if-exists=.env backend/server.mjs",
-    "start": "node --env-file-if-exists=.env backend/server.mjs",
-    "test": "node --test backend/tests/*.test.mjs",
-    "check": "node --check backend/server.mjs && node --check backend/storage.mjs && node --check api/[...path].mjs && node --check frontend/app.js && node scripts/check-assets.mjs"
+    "dev": "node scripts/preparar-vsl.mjs && node scripts/exportar.mjs && node scripts/preview.mjs",
+    "build:ghl": "node scripts/exportar.mjs --produccion",
+    "check": "node scripts/preparar-vsl.mjs && node scripts/verificar.mjs",
+    "test": "node --test scripts/flow.test.mjs",
+    "build": "node scripts/preparar-vsl.mjs && node scripts/exportar.mjs && node scripts/stage-vercel.mjs"
   }
 }

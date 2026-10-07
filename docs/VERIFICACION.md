@@ -1,11 +1,13 @@
-# Verificación versión 6.1
+# Validación de esta entrega
 
-- npm run check: sintaxis Node del servidor, storage, función Vercel y frontend; comprobación de rutas de medios requeridos.
-- npm test: 16 pruebas pasaron. Incluyen rutas, streaming HEAD/Range, agenda demo, filtros, origen, rate limit, Calendly con API simulada y persistencia Supabase con respuestas simuladas.
-- Render del frontend en DOM simulado: cuatro videos y caso Daniela con foto; nombre Francelia; cuatro razones; encabezado de 50 familias; /registro con agenda antes del formulario; preguntas tras reservar; página de gracias.
-- Imágenes de documentos editadas inspeccionadas visualmente: texto ilegible.
-- ZIP: comprobación CRC y extracción completa.
+- Build estático de Vercel: correcto.
+- Compilación/sintaxis de las seis páginas generadas: correcta.
+- Veinte medios locales presentes y no vacíos, incluidos cinco vídeos.
+- Tres pruebas: las 27 combinaciones de filtros; experiencia/objetivo/decisión no descalifican; orden VSL → formulario → testimonios y un único botón de registro.
+- Rutas locales: Inicio, Registro, Agenda, Gracias, Gracias acompañado, No apto y Privacidad devuelven 200; medio inexistente devuelve 404.
+- Servidor local soporta Range 206 para reproducción MP4 progresiva.
+- VSL entero: 354,837 s; salida 1280×720, H.264/AAC, 40.973.574 bytes; faststart. Original recibido: 186.260.320 bytes, 1920×1080. No se cambiaron escenas ni se recortó el vídeo.
+- Francelia; cuatro razones; CONSUR 15 años; cinco beneficios; sin plusvalía garantizada; Rogel/Ana Karen sin relato; noticias sin enlaces de salida.
+- VSL sin autoplay, portada, tiempo visible ni barra de avance. Reproducción, pausa, sonido y pantalla completa.
 
-No se probaron contra una cuenta real Supabase/GHL, no se creó una reserva Calendly y no se enviaron emails/WhatsApp. La revisión visual responsive en navegador de esta versión queda pendiente: el navegador disponible rechazó localhost con ERR_BLOCKED_BY_CLIENT. La estructura CSS aplica una columna en bloques de confianza/oferta en móvil y dos en escritorio, pero esto no sustituye una prueba visual en dispositivos.
-
-Pendientes de materiales: VSL principal, datos legales definitivos. Se eliminó el sondeo de una fuente ausente: la fuente del sistema se usa por defecto.
+Límites: no se pudo ejecutar Chromium en este entorno; la comprobación visual en móvil/escritorio y la reproducción en dispositivos quedan pendientes. Se inspeccionaron fotogramas del VSL, no se transcribió ni auditó íntegramente su discurso. No hay acceso operativo a GHL; las pruebas locales no certifican guardado en CRM, correos, WhatsApp, Meet, disponibilidad, regalo, dominio ni redirecciones del widget real. El aviso es un borrador pendiente de revisión del responsable.

@@ -1,0 +1,1 @@
+Medios de BOSCO. vsl.mp4 contiene el VSL completo entregado, optimizado a 720p para web. Guardar el original de 1080p por separado. Para GHL subir a Media Storage y completar las URLs públicas en config-ghl.json. No se sube este ZIP directamente al constructor.
