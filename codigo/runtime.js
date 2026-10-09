@@ -1,6 +1,6 @@
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const main=document.querySelector('#main');
-const header=()=>`<header class="qualification-header"><h2>¿Quieres más información sobre el proyecto? Responde estas preguntas y agenda tu sesión gratuita con Marisol.</h2><h1><span>Cuéntanos un poco</span><em>sobre ti</em></h1><p>Solo toma 1 minuto. Nos ayuda a preparar tu sesión para que sea 100% efectiva para ti.</p></header>`;
+const header=()=>`<header class="qualification-header"><h2>¿Quieres más información sobre el proyecto?</h2><p class="qualification-instruction">Responde estas preguntas y agenda tu sesión gratuita con Marisol.</p><p class="qualification-description">Solo toma 1 minuto. Nos ayuda a preparar tu sesión para que sea 100% efectiva para ti.</p></header>`;
 const safeUrl=value=>{try{const u=new URL(value);return u.protocol==='https:'?u.href:'';}catch{return '';}};
 function mountQualification(){const slot=document.querySelector('#qualification-slot');if(!slot)return;slot.innerHTML=header();const url=safeUrl(settings.qualificationEmbedUrl);
 if(url){slot.insertAdjacentHTML('beforeend',`<iframe class="ghl-native-frame" style="--form-height:${Math.max(600,Math.min(4000,Number(settings.formHeight)||1350))}px" src="${esc(url)}" title="Datos y preguntas de calificación de BOSCO" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`);return;}

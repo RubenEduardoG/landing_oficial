@@ -4,7 +4,7 @@
   "project": "BOSCO Departamentos",
   "hero": {
     "title": "Te enseño a pasar de 0 a <em>$800K MXN</em> en bienes raíces, sin negocio, sin experiencia, con un método ya probado",
-    "subtitle": "El mismo método con el que mis clientes y yo hemos visto una plusvalía sostenida del 15% en los últimos 4 años en la ciudad de mayor crecimiento de México — explicado paso a paso para que puedas invertir desde donde estás."
+    "subtitle": "El mismo método con el que mis clientes y yo hemos visto una plusvalía sostenida del 15% en los últimos 4 años en la ciudad de mayor crecimiento de México explicado paso a paso para que puedas invertir desde donde estás."
   },
   "cases": [
     {
@@ -22,7 +22,20 @@
       "poster": "/assets/imagenes/paul-video.webp"
     },
     {
-      "name": "Rogel",
+      "name": "Daniela",
+      "summary": "Daniela compró en diciembre de 2025 a un precio de $2,000,000 MXN, con $200,000 MXN de enganche. Según la información proporcionada por el cliente, su departamento alcanzó un valor de $2,400,000 MXN.",
+      "metric": "$400,000 MXN de plusvalía",
+      "image": "/assets/imagenes/daniela.webp"
+    },
+    {
+      "name": "Majo",
+      "title": "Mira lo que Majo dice sobre la asesoría de Marisol al invertir",
+      "quote": "Si quieres invertir de forma segura, te recomiendo a Marisol. Nos dio mucha claridad, tiene paciencia para explicarte todo — lo legal, la ubicación, las formas de invertir — y te acompaña en todo el proceso para que no inviertas en algo inseguro. Por eso nos dio la confianza de poner nuestro patrimonio en este proyecto.",
+      "video": "/assets/videos/majo.mp4",
+      "poster": "/assets/imagenes/majo-video.webp"
+    },
+    {
+      "name": "Rigel",
       "quote": "",
       "metric": "",
       "video": "/assets/videos/rogel.mp4",
@@ -34,12 +47,6 @@
       "metric": "",
       "video": "/assets/videos/ana-karen.mp4",
       "poster": "/assets/imagenes/ana-karen-video.webp"
-    },
-    {
-      "name": "Daniela",
-      "summary": "Daniela compró en diciembre de 2025 a un precio de $2,000,000 MXN, con $200,000 MXN de enganche. Según la información proporcionada por el cliente, su departamento alcanzó un valor de $2,400,000 MXN.",
-      "metric": "$400,000 MXN de plusvalía",
-      "image": "/assets/imagenes/daniela.webp"
     }
   ],
   "trust": [
@@ -141,7 +148,7 @@
     },
     {
       "kind": "photo",
-      "image": "/assets/imagenes/construccion.webp",
+      "image": "/assets/imagenes/marisol-inversion.jpg",
       "label": "Marisol en el proyecto"
     }
   ]
