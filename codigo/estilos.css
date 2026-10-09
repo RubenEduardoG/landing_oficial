@@ -146,7 +146,7 @@ footer a:hover { color: var(--blanco); text-decoration: underline; }
 .footer-bottom > p:first-child { color: var(--plata); margin-bottom: 12px; }
 .footer-bottom .fine { margin: 0; max-width: 710px; color: #a8abb5; }
 .skip { position: absolute; top: -100px; background: var(--azul); color: var(--marino); padding: 12px; z-index: 5; }
-.skip:focus { top: 0; }
+.skip:focus-visible { top: 0; }
 [hidden] { display: none !important; }
 @media (max-width: 640px) {
   .top, main, .footer-inner { width: calc(100% - 32px); }
@@ -232,7 +232,6 @@ strong{color:var(--blanco);font-weight:700}.hero{position:relative}.hero::before
 .news-image{height:auto;aspect-ratio:auto;object-fit:contain;background:white}
 .news{align-items:start}
 .news article{min-width:0}
-.preview-banner{padding:12px 20px;border-bottom:1px solid rgba(224,195,127,.4);color:#e0c37f;text-align:center;font-size:14px;background:#000017;position:relative;z-index:2}
 .status:empty{display:none}
 .footer-bottom p{overflow-wrap:anywhere}
 @media(max-width:600px){.registration-cta{width:100%;max-width:360px;gap:18px;font-size:16px;padding:16px 22px}.registration-section{margin-bottom:44px}.news-image{height:auto}.ghl-native-frame{height:var(--form-height,1550px)}}
